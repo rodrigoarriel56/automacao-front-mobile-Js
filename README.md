@@ -24,6 +24,8 @@ Se rodar o appium-doctor e aparecer problema no bin, por favor descomentar a ult
 
 
 ## 4-) Json para configurar o Appium Desktop:
+
+Android:
 {
   "platformName": "Android",
   "deviceName": "920110594119334a",
@@ -31,7 +33,8 @@ Se rodar o appium-doctor e aparecer problema no bin, por favor descomentar a ult
   "automationName": "uiautomator2"
 }`
 
-IOS: `{
+IOS:
+ `{
   "app": "C:\\GitMobile\\FrameworkMobile\\automationMobile\\App\\iOS\\.ipa"",
   "platformName": "iOS",
   "platformVersion": "12.2",
