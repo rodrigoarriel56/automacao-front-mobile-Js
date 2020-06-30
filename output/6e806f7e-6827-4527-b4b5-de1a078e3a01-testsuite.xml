@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1573269243068' stop='1573269257376'>
     <name>Login</name>
-    <title>Login</title>
+    <title>Login</title>   
     <test-cases>
         <test-case start='1573269243069' status='passed' stop='1573269256953'>
             <name>Cadastro @Login2</name>
