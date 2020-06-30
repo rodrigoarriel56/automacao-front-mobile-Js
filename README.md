@@ -24,20 +24,16 @@ Se rodar o appium-doctor e aparecer problema no bin, por favor descomentar a ult
 
 
 ## 4-) Json para configurar o Appium Desktop:
- Android: `{
-  "app": "/Users/hebertsoares/Documents/QaNinja/CodeceptJS/app-debug.apk",
-  "platformName": "android",
-  "platformVersion": "9",
-  "deviceName": "novo1"
+{
+  "platformName": "Android",
+  "deviceName": "920110594119334a",
+  "app": "C:\\GitMobile\\FrameworkMobile\\automationMobile\\App\\Android\\app-qa-release0.64.0.apk",
+  "automationName": "uiautomator2"
 }`
 
 IOS: `{
-  "app": "/Users/hebertsoares/Documents/Qa Ninja/CodeceptJS/LoginExample.app",
+  "app": "C:\\GitMobile\\FrameworkMobile\\automationMobile\\App\\iOS\\.ipa"",
   "platformName": "iOS",
   "platformVersion": "12.2",
   "deviceName": "iPhone X"
 }`
-
-## 5-) Arquivos de configurações de cada Plataforma Sem Gherkin:
-Codecept.config.js - Android: https://bit.ly/2UjhWcC
-Codecept.config.js - IOS: https://bit.ly/2ScvW5y
