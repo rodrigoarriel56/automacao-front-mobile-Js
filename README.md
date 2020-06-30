@@ -69,4 +69,4 @@ IOS:
 
 ## 5-) Execute todos os testes a partir do dir atual:
 
-## Comando para executar teste: npx codeceptjs run
+npx codeceptjs run
