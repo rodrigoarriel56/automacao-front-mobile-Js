@@ -12,7 +12,10 @@
   "dependencies": {
     "appium-doctor": "^1.9.0",
     "codeceptjs": "^2.0.8",
-    "webdriverio": "^5.23.0"
+    "node": "^14.4.0",
+    "python3": "0.0.1",
+    "selenium": "^2.20.0",
+    "webdriverio": "^6.1.22"
   },
   "bundledDependencies": [
     "appium-doctor",
