@@ -8,7 +8,7 @@ exports.config = {
       port: 4723,
       desiredCapabilities: {
         automationName: 'uiautomator2',
-        deviceName: 'emulator-5554',
+        deviceName: 'teste02',
         platformVersion: '9'
       }
     }

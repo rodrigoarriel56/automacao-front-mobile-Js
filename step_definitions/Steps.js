@@ -1,13 +1,14 @@
 const { I } = inject();
-
+ 
 Given('que estou logado na conta midway', () => {
   
-  I.wait(20); 
+  I.waitForElement('Abrir minha conta Midway', 10)
 
   // Botão Abrir minha conta Midway
   I.tap('Abrir minha conta Midway');
 
   // Notificação permitir
+  I.waitForElement('ALLOW', 5)
   I.tap('ALLOW'); 
 
   // Botão entrar
@@ -15,7 +16,8 @@ Given('que estou logado na conta midway', () => {
   
   // Campo CPF
   I.fillField('//android.view.ViewGroup//android.widget.EditText', '11947458817');
- 
+  I.waitForElement('Continuar', 5)
+
   // Botão Continuar
   I.tap('Continuar')
   I.wait(5); 
@@ -25,7 +27,7 @@ Given('que estou logado na conta midway', () => {
  
   //Botão Entrar
   I.tap('Entrar')
-  I.wait(20); 
+  I.wait(30); 
 
 });
 
