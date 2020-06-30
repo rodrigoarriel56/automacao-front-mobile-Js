@@ -45,6 +45,10 @@ Para executar o teste móvel, você precisa de um emulador de dispositivo (dispo
 
 npm install codeceptjs webdriverio --save
 
+ou 
+
+npm install webdriverio
+
 ## Configurando
 Inicialize o CodeceptJS com comando:init
 
