@@ -25,8 +25,10 @@ exports.config = {
     steps: ['./step_definitions/steps.js']
   },
   plugins: {
-    "allure": {
-      
+    "allure":
+     {
+    fullPageScreenshots: true,
+    screenshotsForAllureReport: false,  
     },
     screenshotOnFail: {
       enabled: true
