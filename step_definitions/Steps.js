@@ -2,7 +2,7 @@ const { I } = inject();
  
 Given('que estou logado na conta midway', () => {
   
-  I.waitForElement('Abrir minha conta Midway', 20)
+  I.waitForElement('Abrir minha conta Midway', 10)
 
   // Botão Abrir minha conta Midway
   I.tap('Abrir minha conta Midway'); 
@@ -15,7 +15,7 @@ Given('que estou logado na conta midway', () => {
   I.tap('Entrar'); 
   
   // Campo CPF
-  I.fillField('//android.view.ViewGroup//android.widget.EditText', '11947458817');
+  I.fillField('//android.view.ViewGroup//android.widget.EditText', '92322397369');
   I.waitForElement('Continuar', 5)
 
   // Botão Continuar
@@ -23,19 +23,26 @@ Given('que estou logado na conta midway', () => {
   I.wait(5); 
   
   //Campo Senha
-  I.fillField('//android.view.ViewGroup//android.widget.EditText', '010203');
+  I.fillField('//android.view.ViewGroup//android.widget.EditText', '102030'); 
  
   //Botão Entrar
-  I.tap('Entrar')
-  I.wait(30); 
+  I.tap('Entrar');
+  I.wait(10); 
+
 
 });
 
-When('clico em saldo ', () => {
+When('clico em saldo', () => {
 
+  //Botão saldo
+  I.waitForVisible('', 30) 
+  I.tap(''); 
+  I.wait(10);  
   
 });
 
 Then('movimentação da conta é apresenta com sucesso', () => {
   
-});
+  I.waitForVisible('Saldo disponível',1); 
+
+});  
