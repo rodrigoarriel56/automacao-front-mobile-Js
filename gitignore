@@ -1,0 +1,6 @@
+# Arquivo a ser ignorado
+codecept.conf.js
+
+# output
+output/
+
