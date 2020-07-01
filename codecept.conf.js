@@ -9,7 +9,7 @@ exports.config = {
       desiredCapabilities: {
         automationName: 'uiautomator2',
         deviceName: 'd2e3f53a',
-        platformVersion: '9'
+        platformVersion: '9' 
       }
     }
   },
