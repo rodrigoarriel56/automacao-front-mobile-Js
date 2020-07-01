@@ -2,13 +2,13 @@ exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: 'C:\\MobileJS\\automationMobileJS\\app\\Android\\app-qa-release0.66.0.apk',
+      app: '/Users/60003350/WorkSpaceMidway/Projetos/AutomationMobileJS/app/Android/app-qa-release0.66.0.apk',
       platform: 'Android',
       host: 'localhost',
       port: 4723,
       desiredCapabilities: {
         automationName: 'uiautomator2',
-        deviceName: 'teste02',
+        deviceName: 'd2e3f53a',
         platformVersion: '9'
       }
     }
@@ -25,8 +25,10 @@ exports.config = {
     steps: ['./step_definitions/steps.js']
   },
   plugins: {
-    "allure": {
-      
+    "allure":
+     {
+    fullPageScreenshots: true,
+    screenshotsForAllureReport: false,  
     },
     screenshotOnFail: {
       enabled: true
