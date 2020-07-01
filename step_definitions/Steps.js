@@ -5,7 +5,7 @@ Given('que estou logado na conta midway', () => {
   I.waitForElement('Abrir minha conta Midway', 20)
 
   // Botão Abrir minha conta Midway
-  I.tap('Abrir minha conta Midway');
+  I.tap('Abrir minha conta Midway'); 
 
   // Notificação permitir
   I.waitForElement( '//android.widget.Button[2]', 5)
