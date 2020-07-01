@@ -2,7 +2,7 @@ exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: '/Users/60003339/WorkspaceArriel/projetos/AutomationMobileJS/app/Android/app-qa-release0.66.0.apk',
+      app: 'Arriel/Users/60003339/WorkspaceArriel/projetos/AutomationMobileJS/app/Android/app-qa-release0.66.0.apk',
       platform: 'Android',
       host: 'localhost',
       port: 4723,
