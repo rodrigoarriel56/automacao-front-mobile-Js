@@ -1,6 +1,8 @@
-# Arquivo a ser ignorado
-codecept.conf.js
+# lembre de colocar o nome da pasta sem o ponto na frente
 
-# output
-output/
+# Arquivo a ser ignorado
+.codecept.conf.js
+
+# Ignora quaisquer diretórios chamados "output"
+.output/
 
