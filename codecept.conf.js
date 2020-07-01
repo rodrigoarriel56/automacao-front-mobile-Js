@@ -2,14 +2,14 @@ exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: '/Users/60003350/WorkSpaceMidway/Projetos/AutomationMobileJS/app/Android/app-qa-release0.66.0.apk',
+      app: 'Arriel/Users/60003339/WorkspaceArriel/projetos/AutomationMobileJS/app/Android/app-qa-release0.66.0.apk',
       platform: 'Android',
       host: 'localhost',
       port: 4723,
       desiredCapabilities: {
         automationName: 'uiautomator2',
-        deviceName: 'd2e3f53a',
-        platformVersion: '9' 
+        deviceName: 'emulador-5554',
+        platformVersion: '8'
       }
     }
   },
