@@ -22,7 +22,7 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/ExtratoSteps.js']  
+    steps: ['./step_definitions/EncerramentoContaPagSteps.js']      
   },
   plugins: {
     "allure":

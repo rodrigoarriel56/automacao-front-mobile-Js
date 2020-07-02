@@ -30,30 +30,30 @@ Given('que estou logado na conta midway', () => {
 
 });
 
-When('clico em extrato', () => {
+When('clico em perfil da conta', () => {
 
-  //Botão Extrato
-  I.tap('Extrato');
+    //Botão menu perfil 
+    I.waitForVisible('//android.view.ViewGroup//android.widget.TextView[3]',20);
+    I.tap('//android.view.ViewGroup//android.widget.TextView[3]');  
 
-  I.wait(30);
-
-  //Botão Entradas
-  I.waitForVisible('Entradas', 5); 
-  I.tap('Entradas');
-
-   //Botão Saídas
-  I.waitForVisible('Saídas', 5); 
-  I.tap('Saídas');
-
-  //Botão Futuro
-  I.waitForVisible('Futuro', 5); 
-  I.tap('Futuro');
+    I.wait(10);   
 
 });
 
-Then('movimentação do extrato é apresenta com sucesso', () => {
-    
-    I.waitForVisible('Conta simples', 5);
-    I.waitForVisible('Extrato', 5);  
+When('clico encerramento conta simples', () => {
 
+    //Botão Encerrar conta simples
+    I.waitForVisible('Encerrar conta simples', 5);
+    I.tap('Encerrar conta simples');
+  
+    I.wait(10);
+ 
+});
+
+Then('conta simples encerrada com sucesso', () => {
+    
+    I.waitForVisible('Sair', 1);
+    I.tap('Sair');
+    I.wait(5);
+  
 });  
