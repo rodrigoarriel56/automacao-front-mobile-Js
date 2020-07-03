@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: Validar apresentação do extrato
+Funcionalidade: Extrato - Conta Pagamento
 
   @Extrato
   Cenario: Consulta de extrato midway 

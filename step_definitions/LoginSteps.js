@@ -15,7 +15,7 @@ Given('que estou na tela de login', () => {
   I.tap('Entrar'); 
   
   // Campo CPF
-  I.fillField('//android.view.ViewGroup//android.widget.EditText', '92322397369');
+  I.fillField('//android.view.ViewGroup//android.widget.EditText', '71882988310');
   I.waitForElement('Continuar', 5)
 
   // Botão Continuar

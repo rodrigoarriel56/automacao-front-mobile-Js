@@ -1,5 +1,5 @@
 #language: pt
-Funcionalidade: Consulta de saldo
+Funcionalidade: Saldo - Conta Pagamento
 
 @Saldo
 Cenario: Consulta de saldo midway 

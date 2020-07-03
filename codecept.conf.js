@@ -22,9 +22,9 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/EncerramentoContaPagSteps.js']      
+    steps: ['./step_definitions/DepositoPorBoletoSteps.js']      
   },
-  plugins: {
+  plugins: { 
     "allure":
      {
     fullPageScreenshots: true,
