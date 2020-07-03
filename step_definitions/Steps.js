@@ -1,21 +1,23 @@
 const { I } = inject();
+const allure = codeceptjs.container.plugins('allure');
  
 Given('que estou logado na conta midway', () => {
   
-  I.waitForElement('Abrir minha conta Midway', 20)
+  I.waitForElement('Abrir minha conta Midway', 30)
 
   // Botão Abrir minha conta Midway
   I.tap('Abrir minha conta Midway'); 
 
   // Notificação permitir
-  I.waitForElement( '//android.widget.Button[2]', 5)
+  I.waitForElement( '//android.widget.Button[2]', 10)
   I.tap('//android.widget.Button[2]'); 
 
   // Botão entrar
+  I.waitForElement(`//android.view.ViewGroup/android.view.ViewGroup[2]`, 10)
   I.tap('Entrar'); 
   
   // Campo CPF
-  I.fillField('//android.view.ViewGroup//android.widget.EditText', '11947458817');
+  I.fillField('//android.view.ViewGroup//android.widget.EditText', '92322397369');
   I.waitForElement('Continuar', 5)
 
   // Botão Continuar
@@ -23,11 +25,12 @@ Given('que estou logado na conta midway', () => {
   I.wait(5); 
   
   //Campo Senha
-  I.fillField('//android.view.ViewGroup//android.widget.EditText', '010203');
+  I.fillField('//android.view.ViewGroup//android.widget.EditText', '102030');
  
   //Botão Entrar
   I.tap('Entrar')
   I.wait(30); 
+  
 
 });
 

@@ -1,8 +1,10 @@
+const { SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG } = require("constants");
+
 exports.config = {
-  output: './output',
+  output: './allure-report/report',
   helpers: {
     Appium: {
-      app: '/Users/60003339/WorkspaceArriel/projetos/AutomationMobileJS/app/Android/app-qa-release0.66.0.apk',
+      app: '/Users/60003339/WorkspaceArriel/App/app-qa-release0.67.0.apk',
       platform: 'Android',
       host: 'localhost',
       port: 4723,
@@ -27,12 +29,26 @@ exports.config = {
   plugins: {
     "allure":
      {
+    disableWebdriverStepsReporting: true,
+    disableWebdriverScreenshotsReporting: true,
+    enabled: true,
     fullPageScreenshots: true,
-    screenshotsForAllureReport: false,  
+    screenshotsForAllureReport: true,
+    addAttachment: true,  
     },
     screenshotOnFail: {
       enabled: true
-    }
+    },
+    addAttachment: {
+      name: SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG,
+      content: true,
+    },
+    addEnvironment: {
+      name: true,
+      value: true,
+
+    },
+    
   },
   tests: './*_test.js',
   name: 'automationMobileJS',

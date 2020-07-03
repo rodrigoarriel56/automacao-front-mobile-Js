@@ -1,0 +1,22 @@
+<environment>
+    <parameter>
+        <key>Ambiente</key>
+        <value>DEV</value>
+    </parameter>
+    <parameter>
+        <key>DevicesName</key>
+        <value>Emulator-5554</value>
+    </parameter>
+    <parameter>
+        <key>PlatforName</key>
+        <value>Android-8.0</value>
+    </parameter>
+    <parameter>
+        <key>VersionApp</key>
+        <value>0.67.0</value>
+    </parameter>
+    <parameter>
+        <key>Stand</key>
+        <value>Production</value>
+    </parameter>
+</environment>
