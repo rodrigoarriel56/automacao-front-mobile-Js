@@ -35,18 +35,18 @@ When('clico em extrato', () => {
   //Botão Extrato
   I.tap('Extrato');
 
-  I.wait(30);
+  I.wait(20);
 
   //Botão Entradas
-  I.waitForVisible('Entradas', 5); 
+  I.waitForVisible('Entradas', 3); 
   I.tap('Entradas');
 
    //Botão Saídas
-  I.waitForVisible('Saídas', 5); 
+  I.waitForVisible('Saídas', 3); 
   I.tap('Saídas');
 
   //Botão Futuro
-  I.waitForVisible('Futuro', 5); 
+  I.waitForVisible('Futuro', 3); 
   I.tap('Futuro');
 
 });

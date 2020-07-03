@@ -43,18 +43,21 @@ When('clico em depósito por boleto', () => {
 When('preencho campo qual o valor do depósito?', () => {
 
    // Campo qual o valor do depósito?
-   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',20);
+   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',5);
    I.fillField('//android.view.ViewGroup//android.widget.EditText', '2.000,00');
 
    // Botão Gerar boleto
-   I.waitForVisible('Gerar boleto'),5;
-   I.tap('Gerar boleto')
+   I.waitForVisible('Gerar boleto',5);
+   I.tap('Gerar boleto') 
 
-   I.wait(20); 
+   I.wait(10); 
    
 });
 
 Then('boleto gerado com sucesso', () => {
-    
-  
+   
+   //Validando Boleto gerado com sucesso
+   I.waitForVisible('Boleto gerado com',5);
+   I.waitForVisible('Sucesso!',5);
+
 });  
