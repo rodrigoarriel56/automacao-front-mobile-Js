@@ -10,8 +10,8 @@ exports.config = {
       port: 4723,
       desiredCapabilities: {
         automationName: 'uiautomator2',
-        deviceName: 'emulador-5554',
-        platformVersion: '8'
+        deviceName: 'd2e3f53a',
+        platformVersion: '9'
       }
     }
   },
@@ -24,9 +24,9 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/steps.js']
+    steps: ['./step_definitions/SaldoSteps.js']         
   },
-  plugins: {
+  plugins: { 
     "allure":
      {
     disableWebdriverStepsReporting: true,
