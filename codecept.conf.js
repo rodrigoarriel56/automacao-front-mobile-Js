@@ -22,7 +22,7 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/DepositoPorBoletoSteps.js']      
+    steps: ['./step_definitions/SaldoSteps.js']         
   },
   plugins: { 
     "allure":

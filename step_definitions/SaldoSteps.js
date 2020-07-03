@@ -36,14 +36,13 @@ Given('que estou logado na conta midway', () => {
 When('clico em saldo', () => {
 
   //Botão saldo
-  I.waitForVisible('', 40) 
+  I.waitForVisible('', 30) 
   I.tap(''); 
-  I.wait(10);  
   
 });
 
 Then('movimentação da conta é apresenta com sucesso', () => {
   
-  I.waitForVisible('Saldo disponível', 40);  
+  I.waitForVisible('Saldo disponível', 10);   
 
 });  
