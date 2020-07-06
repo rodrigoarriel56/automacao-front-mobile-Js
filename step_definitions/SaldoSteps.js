@@ -14,13 +14,12 @@ Given('que estou logado na conta midway', () => {
   I.tap('//android.widget.Button[2]'); 
 
   // Botão entrar
-  I.waitForElement(`//android.view.ViewGroup/android.view.ViewGroup[2]`, 10)
+  I.waitForElement(`//android.view.ViewGroup/android.view.ViewGroup[2]`, 5)
   I.tap('Entrar'); 
   
   // Campo CPF
   I.fillField('//android.view.ViewGroup//android.widget.EditText', '71882988310');
-
-  I.waitForElement('Continuar', 5)
+  I.waitForElement('Continuar', 20)
 
   // Botão Continuar
   I.tap('Continuar')
