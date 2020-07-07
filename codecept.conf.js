@@ -4,7 +4,7 @@ exports.config = {
   output: './allure-report/report',
   helpers: {
     Appium: {
-      app: '/Users/60003350/WorkSpaceMidway/Projetos/AutomationMobileJS/app/Android/app-qa-release0.67.0.apk',
+      app: '/Users/60003350/WorkSpaceMidway/Projetos/AutomationMobileJS/app/Android/app-qa-release0.68.0.apk',
       platform: 'Android',
       host: 'localhost',
       port: 4723,

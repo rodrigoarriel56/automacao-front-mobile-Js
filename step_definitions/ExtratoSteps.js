@@ -20,7 +20,7 @@ Given('que estou logado na conta midway', () => {
 
   // Botão Continuar
   I.tap('Continuar')
-  I.wait(5);
+  I.wait(20);
 
    //Campo Senha
    I.fillField('//android.view.ViewGroup//android.widget.EditText', '102030'); 

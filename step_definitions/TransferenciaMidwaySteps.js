@@ -20,7 +20,7 @@ Given('que estou logado na conta midway', () => {
 
   // Botão Continuar
   I.tap('Continuar')
-  I.wait(5);
+  I.wait(20);
 
    //Campo Senha
    I.fillField('//android.view.ViewGroup//android.widget.EditText', '102030'); 
@@ -51,14 +51,14 @@ When('clico em transferencia', () => {
    //Inserir Conta
    I.tap('Conta'); 
    I.waitForElement('//android.view.ViewGroup[3]//android.widget.EditText',5)
-   I.fillField('//android.view.ViewGroup[3]//android.widget.EditText','1212273'); 
+   I.fillField('//android.view.ViewGroup[3]//android.widget.EditText','1212273');  
     
    //Botão Continuar
    I.tap('Continuar'); 
    I.wait(10);  
 
    //Campo Qual valor quer transferir
-   I.fillField('//android.view.ViewGroup//android.widget.EditText', '100,00'); 
+   I.fillField('//android.view.ViewGroup//android.widget.EditText', '20,00'); 
    I.tap('Continuar')
    I.wait(20);  
    
@@ -67,15 +67,18 @@ When('clico em transferencia', () => {
    I.tap('Continuar')
 
    //Idenficação do meu extrato
-   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',10); 
+   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',5); 
    I.fillField('//android.view.ViewGroup//android.widget.EditText', 'Pagamento de contas');
    
 });  
 
 Then('transferência entre contas midway efetuado com sucesso', () => {
   
+  //Validar nome da tela
+  I.waitForVisible('Confirme os dados da sua transferência',5); 
+  
   //Confirmar
-  I.tap('Confirmar')  
+  I.tap('Confirmar')   
   I.wait(20); 
 
 });

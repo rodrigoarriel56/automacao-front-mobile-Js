@@ -20,7 +20,7 @@ Given('que estou logado na conta midway', () => {
 
   // Botão Continuar
   I.tap('Continuar')
-  I.wait(5);
+  I.wait(20); 
 
    //Campo Senha
    I.fillField('//android.view.ViewGroup//android.widget.EditText', '102030'); 
@@ -41,41 +41,53 @@ When('clico em transferencia outros bancos', () => {
   I.tap('Instituição da conta');
 
   //Campo pesquisar conta
-  I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',10) 
+  I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',5) 
   I.fillField('//android.view.ViewGroup//android.widget.EditText', '336'); 
 
   //Clicar na Instituição
-  I.waitForVisible('336 - BANCO C6 S.A.',5)
-  I.tap('336 - BANCO C6 S.A.',5) 
+  I.waitForVisible('//android.view.ViewGroup/android.widget.TextView',5)
+  I.tap('//android.view.ViewGroup/android.widget.TextView') 
+  I.wait(10);
+  
+  //Inserir Agencia
+  I.tap('Agência'); 
+  I.waitForElement('//android.view.ViewGroup[2]/android.widget.EditText',1)
+  I.fillField('//android.view.ViewGroup[2]/android.widget.EditText','0001'); 
 
    //Inserir Conta
-   I.tap('Conta'); 
-   I.waitForElement('//android.view.ViewGroup[3]//android.widget.EditText',5)
-   I.fillField('//android.view.ViewGroup[3]//android.widget.EditText','1212273'); 
-    
+   I.tap('Conta');  
+   I.waitForElement('//android.view.ViewGroup[3]//android.widget.EditText',1) 
+   I.fillField('//android.view.ViewGroup[3]//android.widget.EditText','7234341'); 
+
+   //Inserir Pra quem é a transferência?
+   I.tap('Pra quem é a transferência?');
+   I.wait(5);
+   I.tap('//android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView'); 
+   I.wait(5);      
+   
    //Botão Continuar
    I.tap('Continuar'); 
    I.wait(10);  
 
    //Campo Qual valor quer transferir
-   I.fillField('//android.view.ViewGroup//android.widget.EditText', '100,00'); 
+   I.fillField('//android.view.ViewGroup//android.widget.EditText', '10,00'); 
    I.tap('Continuar')
    I.wait(20);  
    
    //Confirma espera da data e clicar no botão confirmar
-   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',30)
-   I.tap('Continuar')
-
-   //Idenficação do meu extrato
-   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',10); 
-   I.fillField('//android.view.ViewGroup//android.widget.EditText', 'Pagamento outros bancos');
-   
+   I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',30);
+   I.tap('Continuar');
+   I.wait(10);  
+ 
 });   
 
 Then('transferência entre outros bancos efetuado com sucesso', () => {
   
-  //Confirmar
-  I.tap('Confirmar')  
-  I.wait(20); 
+   //Validar nome da tela 
+   I.waitForVisible('Confirme os dados da sua transferência',5); 
 
-});    
+   //Confirmar
+   I.tap('Confirmar'); 
+   I.wait(10);     
+
+});     

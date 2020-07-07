@@ -21,7 +21,7 @@ Given('que estou na tela de login', () => {
 
   // Botão Continuar
   I.tap('Continuar')
-  I.wait(5); 
+  I.wait(20); 
   
   
 });
