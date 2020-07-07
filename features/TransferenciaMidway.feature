@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: Transferência - Conta Pagamento
+Funcionalidade: Transferência entre contas midway - Conta Pagamento
 
   @TransfMidwayCP
   Cenario: Validar Transferência entre contas midway

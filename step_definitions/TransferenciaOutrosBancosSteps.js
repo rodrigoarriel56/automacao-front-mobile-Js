@@ -83,11 +83,19 @@ When('clico em transferencia outros bancos', () => {
 
 Then('transferência entre outros bancos efetuado com sucesso', () => {
   
-   //Validar nome da tela 
-   I.waitForVisible('Confirme os dados da sua transferência',5); 
+  //Validar nome da tela
+  I.waitForVisible('Confirme os dados da sua transferência',5); 
+  
+  //Confirmar
+  I.tap('Confirmar')   
+  I.wait(10);
+  
+  //Ver comprovante
+  I.waitForVisible('Ver comprovante',5); 
+  I.tap('Ver comprovante')   
+  I.wait(10);
 
-   //Confirmar
-   I.tap('Confirmar'); 
-   I.wait(10);     
+   //Comprovante de transferência
+   I.waitForVisible('Comprovante de transferência',10);     
 
 });     

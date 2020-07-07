@@ -24,7 +24,15 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/TransferenciaOutrosBancosSteps.js']         
+    steps: ['./step_definitions/LoginSteps.js',
+           './step_definitions/SaldoSteps.js',
+           './step_definitions/ExtratoSteps.js',
+           './step_definitions/DepositoPorBoletoSteps.js',
+           './step_definitions/TransferenciaMidwaySteps.js',
+           './step_definitions/TransferenciaOutrosBancosSteps.js',
+           './step_definitions/EncerramentoContaPagSteps.js'
+           ] 
+            
   },
   plugins: { 
     "allure":
