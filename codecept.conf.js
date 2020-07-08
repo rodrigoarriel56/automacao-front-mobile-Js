@@ -4,7 +4,7 @@ exports.config = {
   output: './allure-report/report',
   helpers: {
     Appium: {
-      app: '/Users/60003339/WorkspaceArriel/App/app-qa-release0.67.0.apk',
+      app: '/Users/60003350/WorkSpaceMidway/Projetos/AutomationMobileJS/app/Android/app-qa-release0.68.0.apk',
       platform: 'Android',
       host: 'localhost',
       port: 4723,
@@ -25,7 +25,15 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/SaldoSteps.js']         
+    steps: ['./step_definitions/LoginSteps.js',
+           './step_definitions/SaldoSteps.js',
+           './step_definitions/ExtratoSteps.js',
+           './step_definitions/DepositoPorBoletoSteps.js',
+           './step_definitions/TransferenciaMidwaySteps.js',
+           './step_definitions/TransferenciaOutrosBancosSteps.js',
+           './step_definitions/EncerramentoContaPagSteps.js'
+           ] 
+            
   },
   plugins: { 
     "allure":

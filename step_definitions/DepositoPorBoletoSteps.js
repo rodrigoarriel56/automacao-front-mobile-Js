@@ -11,15 +11,16 @@ Given('que estou logado na conta midway', () => {
   I.tap('//android.widget.Button[2]'); 
 
   // Botão entrar
+  I.waitForElement(`//android.view.ViewGroup/android.view.ViewGroup[2]`, 5)
   I.tap('Entrar'); 
   
   // Campo CPF
-  I.fillField('//android.view.ViewGroup//android.widget.EditText', '71882988310');
-  I.waitForElement('Continuar', 10)
+  I.fillField('//android.view.ViewGroup//android.widget.EditText', '89789778040'); 
+  I.waitForElement('Continuar', 20)
 
   // Botão Continuar
   I.tap('Continuar')
-  I.wait(10);
+  I.wait(20);
 
    //Campo Senha
    I.fillField('//android.view.ViewGroup//android.widget.EditText', '102030');  
@@ -44,14 +45,14 @@ When('preencho campo qual o valor do depósito?', () => {
 
    // Campo qual o valor do depósito?
    I.waitForVisible('//android.view.ViewGroup//android.widget.EditText',5);
-   I.fillField('//android.view.ViewGroup//android.widget.EditText', '2.000,00');
+   I.fillField('//android.view.ViewGroup//android.widget.EditText', '20,00'); 
 
    // Botão Gerar boleto
-   I.waitForVisible('Gerar boleto',5);
+   I.waitForVisible('Gerar boleto',3);
    I.tap('Gerar boleto') 
-
-   I.wait(10); 
+   I.wait(20);
    
+  
 });
 
 Then('boleto gerado com sucesso', () => {

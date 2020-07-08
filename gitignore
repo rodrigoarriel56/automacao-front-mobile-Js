@@ -1,8 +1,11 @@
 # lembre de colocar o nome da pasta sem o ponto na frente
 
 # Arquivo a ser ignorado
-codecept.conf.js
+AutomationMobileJS/codecept.conf.js
 
 # Ignora quaisquer diretórios chamados "output"
 output/
 
+# Ignora quaisquer diretórios chamados "report"
+report/.xml
+report/.png
