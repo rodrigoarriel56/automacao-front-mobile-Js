@@ -10,13 +10,14 @@ exports.config = {
       port: 4723,
       desiredCapabilities: {
         automationName: 'uiautomator2',
-        deviceName: 'd2e3f53a',
-        platformVersion: '9'
+        deviceName: 'emulator-5554',
+        platformVersion: '8'
       }
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+    PageExtrato: './page_definitions/PageExtrato.js' 
   },
   mocha: {},
   bootstrap: null,

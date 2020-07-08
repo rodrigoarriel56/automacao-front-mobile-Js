@@ -1,4 +1,5 @@
 const { I } = inject();
+const login_page = require('./page_definitions/PageExtrato.js');
  
 Given('que estou logado na conta midway', () => {
   
