@@ -1,4 +1,3 @@
-const { I } = inject();
 const onboardingActions = require("../../page_definitions/page_actions/OnboardingActions.js");
 
 Given("que aciono a opção parar abrir minha conta midway", () => {

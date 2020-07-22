@@ -9,8 +9,4 @@ module.exports = {
     campoCpf: "//android.view.ViewGroup//android.widget.EditText",
     campoSenha: "//android.view.ViewGroup//android.widget.EditText",
   },
-
-  textos: {
-    txtBemVindo: "Bem-vindo à Midway!",
-  },
 };

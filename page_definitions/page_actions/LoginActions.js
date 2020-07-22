@@ -1,5 +1,6 @@
 const { I } = inject();
 const pageLogin = require("../page_objects/PageLogin.js");
+const pageHome = require("../page_objects/PageHome.js");
 const pageOnboarding = require("../page_objects/onboarding/PageOnboarding.js");
 
 module.exports = {
@@ -23,6 +24,6 @@ module.exports = {
   selecionaOpcaoLogar() {
     I.waitForElement(pageLogin.botoes.btnEntrar);
     I.tap(pageLogin.botoes.btnEntrar);
-    I.waitForElement(pageLogin.textos.txtBemVindo, 30);
+    I.waitForElement(pageHome.textos.txtBemVindo, 30);
   },
 };
