@@ -88,7 +88,7 @@ $ sh install_dependencies.sh
 
 ## 2-) Configurar seu Bash Profile:
 
-Adicionar isso no seu sudo vi ~/.bash_profile
+Adicionar isso no seu ~/.bash_profile
 ```
 export ANDROID_HOME=/Users/$(whoami)/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
