@@ -19,7 +19,7 @@ exports.config = {
     },
     CPFHelper: {
       require: "./support/CpfHelper.js",
-      comPontos: true
+      comPontos: true,
     },
   },
   include: {
