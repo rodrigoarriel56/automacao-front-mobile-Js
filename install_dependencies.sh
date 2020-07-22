@@ -127,3 +127,19 @@ if [[ $? != 0 ]] ; then
 else
     echo "idb is already installed, skipping..."
 fi
+
+which idb codeceptjs
+if [[ $? != 0 ]] ; then
+    echo "codeceptjs is not installed, installing..."
+    npm install codeceptjs webdriverio --save
+else
+    echo "codeceptjs is already installed, skipping..."
+fi
+
+which idb webdriverio
+if [[ $? != 0 ]] ; then
+    echo "webdriverio is not installed, installing..."
+    npm install webdriverio
+else
+    echo "webdriverio is already installed, skipping..." 
+fi

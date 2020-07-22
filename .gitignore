@@ -1,0 +1,6 @@
+node_modules
+allure-report
+.history/*
+output
+.DS_Store
+**/.DS_Store

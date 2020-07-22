@@ -1,25 +1,36 @@
 {
-  "name": "Projeto Canais Digitais",
+  "name": "ProjetoCanaisDigitais",
   "version": "1.0.0",
   "description": "Banco Digital - Midway",
   "main": "index.js",
   "scripts": {
     "android": "codeceptjs run -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"app\": \"/Users/hebertsoares/Documents/QaNinja/CodeceptJS/app-debug.apk\", \"platform\": \"Android\", \"desiredCapabilities\": { \"deviceName\": \"novao\", \"platformVersion\": \"10\", \"autoGrantPermissions\": true }}}}'",
+    "android-farm": "codeceptjs run -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"platform\": \"Android\", \"desiredCapabilities\": { \"deviceName\": \"novao\", \"platformVersion\": \"10\", \"autoGrantPermissions\": true }}}}'",
     "iOS": "codeceptjs run -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"app\": \"/Users/herbert/Desktop/qaninja.app\", \"platform\": \"iOS\", \"desiredCapabilities\": {\"deviceName\": \"iPhone Xʀ\", \"platformVersion\": \"12.2\"}}}}'"
   },
   "author": "Rodrigo Florindo de Deus",
   "license": "ISC",
   "dependencies": {
-    "appium-doctor": "^1.9.0",
-    "codeceptjs": "^2.0.8",
+    "appium": "^1.17.1",
+    "appium-doctor": "^1.15.3",
+    "chai": "^4.2.0",
+    "codeceptjs": "^2.6.6",
+    "cucumber": "^6.0.5",
     "node": "^14.4.0",
     "python3": "0.0.1",
-    "selenium": "^2.20.0",
-    "webdriverio": "^6.1.22"
+    "selenium": "^2.20.0"
   },
   "bundledDependencies": [
+    "appium",
     "appium-doctor",
+    "chai",
     "codeceptjs",
-    "webdriverio"
-  ]
+    "node",
+    "python3",
+    "selenium"
+  ],
+  "devDependencies": {
+    "allure-commandline": "^2.13.0",
+    "webdriverio": "^5.23.0"
+  }
 }
