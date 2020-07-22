@@ -11,7 +11,7 @@ Given("aceito os termos de uso acionando a opção para entrar", () => {
 Given(
   "preencho todos os campos solicitados corretamente acionando a opção continuar quando necessário",
   async () => {
-    const cpf = await I.generateACPF();
+    const cpf = "27915823043";
     // TODO: usar fakerjs
     onboardingActions.preencherCPFEContinuar(cpf);
     // TODO: usar fakerjs
@@ -36,21 +36,11 @@ Given(
 );
 
 Given("preencho senha", () => {
-  onboarding.preecherCampoSenha1("2");
-  onboarding.preecherCampoSenha2("4");
-  onboarding.preecherCampoSenha3("3");
-  onboarding.preecherCampoSenha4("0");
-  onboarding.preecherCampoSenha5("0");
-  onboarding.preecherCampoSenha6("5");
+  onboardingActions.preencherToken({
+    tokenValido: "2"
+  });
 
-  onboarding.preecherCampoSenha1("2");
-  onboarding.preecherCampoSenha2("4");
-  onboarding.preecherCampoSenha3("3");
-  onboarding.preecherCampoSenha4("0");
-  onboarding.preecherCampoSenha5("0");
-  onboarding.preecherCampoSenha6("5");
-
-  onboarding.clicarSolicitacaoConfiabilidade();
+  // onboarding.clicarSolicitacaoConfiabilidade();
 });
 
 Then("conta pagamento criada com sucesso", () => {

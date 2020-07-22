@@ -5,6 +5,7 @@ const pageBemVindoCPF = require("../page_objects/onboarding/PageBemVindoCPF.js")
 const pageBemVindoNomeCompleto = require("../page_objects/onboarding/PageBemVindoNomeCompleto.js");
 const pageDadosPessoais = require("../page_objects/onboarding/PageDadosPessoais.js");
 const pageBiometriaFacial = require("../page_objects/onboarding/PageBiometriaFacial.js");
+const pageToken = require("../page_objects/onboarding/PageToken.js");
 const permissionModalActions = require("../page_actions/PermissionModalActions.js");
 
 module.exports = {
@@ -64,7 +65,20 @@ module.exports = {
     await I.swipeHorizontal(80, 20);
     await I.swipeHorizontal(80, 20);
     permissionModalActions.permitir();
+    // I.tap(pageBiometriaFacial.botoes.btnContinuar, 0, 0);
+    // I.sendDeviceKeyEvent(27);
+    
     I.tap(pageBiometriaFacial.botoes.btnContinuar, 0, 0);
+    I.tap(pageBiometriaFacial.botoes.btnFotoBiometria, 0, 0);
     I.sendDeviceKeyEvent(27);
+    I.waitForElement(pageBiometriaFacial.botoes.btnContinuar, 20);
+    I.tap(pageBiometriaFacial.botoes.btnContinuar, 0, 0);
   },
+
+    //Método Token
+    preencherToken(dados) {
+    I.waitForElement(pageToken.campos.token, 20);
+    I.tap(pageToken.campos.token, 0, 0);
+    I.fillField(pageToken.campos.token, dados.tokenValido)
+    },
 };
