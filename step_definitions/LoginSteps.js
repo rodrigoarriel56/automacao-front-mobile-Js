@@ -1,6 +1,6 @@
 const { I } = inject();
-const loginActions = require("../page_definitions/page_actions/LoginActions");
-const pageLogin = require("../page_definitions/page_objects/PageLogin.js");
+const pageHome = require("../page_definitions/page_objects/PageHome.js");
+const loginActions = require("../page_definitions/page_actions/LoginActions.js");
 
 Given(/que "([^"]*)" acessa a tela de login do app midway/, (_nome) => {
   loginActions.fechaTelaOnboarding();
@@ -15,5 +15,5 @@ When(/el(?:e|a) aciona a opção para entrar/, () => {
 });
 
 Then("deve ser apresentada a home do app midway", () => {
-  I.see(pageLogin.textos.txtBemVindo);
+  I.see(pageHome.textos.txtBemVindo);
 });

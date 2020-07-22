@@ -34,8 +34,8 @@ exports.config = {
   gherkin: {
     features: "./features/*.feature",
     steps: [
-      "./step_definitions/LoginSteps.js",
       "./step_definitions/SaldoSteps.js",
+      "./step_definitions/LoginSteps.js",
       "./step_definitions/ExtratoSteps.js",
       "./step_definitions/DepositoPorBoletoSteps.js",
       "./step_definitions/TransferenciaMidwaySteps.js",
@@ -43,7 +43,6 @@ exports.config = {
       "./step_definitions/EncerramentoContaPagSteps.js",
       "./step_definitions/onboarding/ContaPagamentoStep.js",
     ],
-    translation: "pt-BR",
   },
 
   plugins: {
@@ -69,5 +68,5 @@ exports.config = {
   },
   tests: "./*_test.js",
   name: "automationMobileJS",
-  translation: "pt-BR",
+  // translation: "pt-BR",
 };
