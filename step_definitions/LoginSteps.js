@@ -1,5 +1,5 @@
-const { I } = inject();
 const pageHome = require("../page_definitions/page_objects/PageHome.js");
+const { I } = inject();
 const loginActions = require("../page_definitions/page_actions/LoginActions.js");
 
 Given(/que "([^"]*)" acessa a tela de login do app midway/, (_nome) => {
