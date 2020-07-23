@@ -9,8 +9,7 @@ class YmlHelper extends Helper {
       `./config/${nomeDoArquivo}.yml`,
       "utf8"
     );
-    const yml = yaml.safeLoad(fileContents);
-    return yml;
+    return yaml.safeLoad(fileContents);
   }
 }
 module.exports = YmlHelper;
