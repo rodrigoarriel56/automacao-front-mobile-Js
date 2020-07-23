@@ -77,8 +77,34 @@ module.exports = {
 
     //Método Token
     preencherToken(dados) {
-    I.waitForElement(pageToken.campos.token, 20);
+    I.waitForElement(pageToken.campos.token, 10);
     I.tap(pageToken.campos.token, 0, 0);
-    I.fillField(pageToken.campos.token, dados.tokenValido)
-    },
+    //I.fillField(pageToken.campos.token, value)
+
+    I.fillField(
+      pageToken.campos.token,
+      dados.tokenValido);
+
+      I.fillField(
+        pageToken.campos.token1,
+        dados.tokenValido);
+
+      I.fillField(
+        pageToken.campos.token2,
+        dados.tokenValido);
+
+      I.fillField(
+        pageToken.campos.token3,
+        dados.tokenValido);
+
+      I.fillField(
+        pageToken.campos.token4,
+        dados.tokenValido);
+
+      I.fillField(
+        pageToken.campos.token5,
+        dados.tokenValido);
+    }
+
+    
 };

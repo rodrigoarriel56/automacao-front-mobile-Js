@@ -35,8 +35,8 @@ Given(
   }
 );
 
-Given("preencho senha", () => {
-  onboardingActions.preencherToken({
+Given(/informo corretamento o codigo de acesso \(token\) recebido por sms/, () => {
+onboardingActions.preencherToken({
     tokenValido: "2"
   });
 
