@@ -6,8 +6,12 @@ Given(/que "([^"]*)" acessa a tela de login do app midway/, (_nome) => {
   loginActions.fechaTelaOnboarding();
 });
 
-Given(/que el(?:e|a) preenche corretamente seus dados/, () => {
-  loginActions.preencheCamposLogin({ cpf: "00592911330", senha: "102030" });
+Given(/que el(?:e|a) preenche corretamente seus dados/, async () => {
+  const config = await I.readYmlWithName("dados");
+  loginActions.preencheCamposLogin({
+    cpf: config.login.cpf,
+    senha: config.login.senha,
+  });
 });
 
 When(/el(?:e|a) aciona a opção para entrar/, () => {

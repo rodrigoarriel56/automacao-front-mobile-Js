@@ -21,6 +21,9 @@ exports.config = {
       require: "./support/CpfHelper.js",
       comPontos: true,
     },
+    YmlHelper: {
+      require: "./support/YmlHelper.js",
+    },
   },
   include: {
     I: "./steps_file.js",
