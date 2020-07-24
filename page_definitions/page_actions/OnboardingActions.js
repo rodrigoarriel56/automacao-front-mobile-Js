@@ -6,6 +6,9 @@ const pageBemVindoNomeCompleto = require("../page_objects/onboarding/PageBemVind
 const pageDadosPessoais = require("../page_objects/onboarding/PageDadosPessoais.js");
 const pageBiometriaFacial = require("../page_objects/onboarding/PageBiometriaFacial.js");
 const pageToken = require("../page_objects/onboarding/PageToken.js");
+const pageSenha = require("../page_objects/onboarding/PageSenha.js");
+const pageRepetirSenha = require("../page_objects/onboarding/PageRepetirSenha.js");
+const pageConfiabilidade = require("../page_objects/onboarding/PageConfiabilidade.js");
 const permissionModalActions = require("../page_actions/PermissionModalActions.js");
 
 module.exports = {
@@ -54,6 +57,8 @@ module.exports = {
     );
 
     I.swipeDown(pageDadosPessoais.botoes.btnContinuarContainer);
+
+    I.tap(pageDadosPessoais.campos.aceitoCompartilharDados);
 
     I.tap(pageDadosPessoais.botoes.btnContinuar, 0, 0);
   },
@@ -104,6 +109,73 @@ module.exports = {
       I.fillField(
         pageToken.campos.token5,
         dados.tokenValido);
+    },
+
+    preencherSenha(dados) {
+     // I.waitForElement(pageSenha.campos.senha, 10);
+      I.tap(pageSenha.campos.senha, 0, 0);
+
+      I.fillField(
+        pageSenha.campos.senha,
+        dados.senhaValida[1]);
+
+      // I.fillField(
+      //   pageSenha.campos.senha1,
+      //   dados.senhaValida[2]);
+
+      // I.fillField(
+      //   pageSenha.campos.senha2,
+      //   dados.senhaValida2);
+
+      // I.fillField(
+      //   pageSenha.campos.senha3,
+      //   dados.senhaValida3);
+
+      // I.fillField(
+      //   pageSenha.campos.senha4,
+      //   dados.senhaValida4);
+
+      // I.fillField(
+      //   pageSenha.campos.senha5,
+      //   dados.senhaValida5);   
+    },
+
+    preencherSenhaNovamente(dados){
+      I.tap(pageRepetirSenha.campos.senha, 0, 0);
+
+      I.fillField(
+        pageRepetirSenha.campos.senha,
+        dados.senhaValida);
+
+      I.fillField(
+        pageRepetirSenha.campos.senha1,
+        dados.senhaValida1);
+
+      I.fillField(
+        pageRepetirSenha.campos.senha2,
+        dados.senhaValida2);
+
+      I.fillField(
+        pageRepetirSenha.campos.senha3,
+        dados.senhaValida3);
+
+      I.fillField(
+        pageRepetirSenha.campos.senha4,
+        dados.senhaValida4);
+
+      I.fillField(
+        pageRepetirSenha.campos.senha5,
+        dados.senhaValida5);   
+    },
+
+    compartilharDadosEContinuar(){
+      I.waitForElement(pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes, 10);
+      I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes, 0, 0)
+      I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosBancoMidway, 0, 0);
+  
+      I.swipeDown(pageConfiabilidade.botoes.btnContinuar);
+  
+      I.tap(pageConfiabilidade.botoes.btnContinuar, 0, 0);
     }
 
     

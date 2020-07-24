@@ -24,7 +24,7 @@ Given(
       dataNascimento: "11121988",
     });
     // TODO: ver realmente se esse compartilhar dados n existe mais
-    // onboarding.clicarAceitoCompartilharMeusDados();
+    //onboardingActions.clicarAceitoCompartilharMeusDados();
   }
 );
 
@@ -41,6 +41,65 @@ onboardingActions.preencherToken({
   });
 
   // onboarding.clicarSolicitacaoConfiabilidade();
+});
+
+When("cadastro uma nova senha corretamente", () => {
+ senhaValida = "222222";
+ resultado = senhaValida.split("");
+  //Senha
+
+  // })
+  // onboardingActions.preencherSenha({
+  //   senhaValida: "1"
+  // });
+
+  // onboardingActions.preencherSenha({
+  //   senhaValida1: "1"
+  // });
+
+  // onboardingActions.preencherSenha({
+  //   senhaValida2: "6"
+  // });
+
+  // onboardingActions.preencherSenha({
+  //   senhaValida3: "0"
+  // });
+
+  // onboardingActions.preencherSenha({
+  //   senhaValida4: "0"
+  // });
+
+  // onboardingActions.preencherSenha({
+  //   senhaValida5: "6"
+  // });
+
+  // //Repetir Senha
+  // onboardingActions.preencherSenhaNovamente({
+  //   senhaValida: "1"
+  // })
+
+  // onboardingActions.preencherSenhaNovamente({
+  //   senhaValida1: "9"
+  // })
+
+  // onboardingActions.preencherSenhaNovamente({
+  //   senhaValida2: "6"
+  // })
+
+  // onboardingActions.preencherSenhaNovamente({
+  //   senhaValida3: "0"
+  // })
+
+  // onboardingActions.preencherSenhaNovamente({
+  //   senhaValida4: "0"
+  // })
+
+  // onboardingActions.preencherSenhaNovamente({
+  //   senhaValida5: "6"
+  // })
+
+  // //Confiabilidade
+  // onboardingActions.compartilharDadosEContinuar();
 });
 
 Then("conta pagamento criada com sucesso", () => {

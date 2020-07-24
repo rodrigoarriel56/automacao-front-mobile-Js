@@ -10,6 +10,7 @@ module.exports = {
     campoCelular: "//android.view.ViewGroup[2]/android.widget.EditText",
     campoEmail: "//android.view.ViewGroup[3]/android.widget.EditText",
     campoDataNascimento: "//android.view.ViewGroup[4]/android.widget.EditText",
+    aceitoCompartilharDados: "//android.view.ViewGroup[6]/android.widget.TextView"
   },
 
 
