@@ -4,7 +4,7 @@ module.exports = {
     },
 
     campos: {
-        aceitoCompartilharDadosGrupoGuararapes: "//android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.TextView",
-        aceitoCompartilharDadosBancoMidway: "android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.TextView"
+        aceitoCompartilharDadosGrupoGuararapes: "//android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup",
+        aceitoCompartilharDadosBancoMidway: "//android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup"
     }
 }

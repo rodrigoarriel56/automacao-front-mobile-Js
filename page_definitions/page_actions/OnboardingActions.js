@@ -91,63 +91,34 @@ module.exports = {
     I.fillField(pageToken.campos.token5, tokenSplitted[5]);
   },
 
-  preencherSenha(dados) {
-    // I.waitForElement(pageSenha.campos.senha, 10);
+  preencherSenha(senha) {
+    const senhaSplitted = senha.split("");
+    I.waitForElement(pageSenha.campos.senha, 10);
     I.tap(pageSenha.campos.senha, 0, 0);
-
-    I.fillField(pageSenha.campos.senha, dados.senhaValida[1]);
-
-    // I.fillField(
-    //   pageSenha.campos.senha1,
-    //   dados.senhaValida[2]);
-
-    // I.fillField(
-    //   pageSenha.campos.senha2,
-    //   dados.senhaValida2);
-
-    // I.fillField(
-    //   pageSenha.campos.senha3,
-    //   dados.senhaValida3);
-
-    // I.fillField(
-    //   pageSenha.campos.senha4,
-    //   dados.senhaValida4);
-
-    // I.fillField(
-    //   pageSenha.campos.senha5,
-    //   dados.senhaValida5);
+    I.fillField(pageSenha.campos.senha, senhaSplitted[0]);
+    I.fillField(pageSenha.campos.senha1, senhaSplitted[1]);
+    I.fillField(pageSenha.campos.senha2, senhaSplitted[2]);
+    I.fillField(pageSenha.campos.senha3, senhaSplitted[3]);
+    I.fillField(pageSenha.campos.senha4, senhaSplitted[4]);
+    I.fillField(pageSenha.campos.senha5, senhaSplitted[5]);
   },
 
-  preencherSenhaNovamente(dados) {
+  preencherSenhaNovamente(senha) {
+    const repetirSenhaSplitted = senha.split("");
+    I.waitForElement(pageRepetirSenha.campos.senha, 10);
     I.tap(pageRepetirSenha.campos.senha, 0, 0);
-
-    I.fillField(pageRepetirSenha.campos.senha, dados.senhaValida);
-
-    I.fillField(pageRepetirSenha.campos.senha1, dados.senhaValida1);
-
-    I.fillField(pageRepetirSenha.campos.senha2, dados.senhaValida2);
-
-    I.fillField(pageRepetirSenha.campos.senha3, dados.senhaValida3);
-
-    I.fillField(pageRepetirSenha.campos.senha4, dados.senhaValida4);
-
-    I.fillField(pageRepetirSenha.campos.senha5, dados.senhaValida5);
+    I.fillField(pageRepetirSenha.campos.senha, repetirSenhaSplitted[0]);
+    I.fillField(pageRepetirSenha.campos.senha1, repetirSenhaSplitted[1]);
+    I.fillField(pageRepetirSenha.campos.senha2, repetirSenhaSplitted[2]);
+    I.fillField(pageRepetirSenha.campos.senha3, repetirSenhaSplitted[3]);
+    I.fillField(pageRepetirSenha.campos.senha4, repetirSenhaSplitted[4]);
+    I.fillField(pageRepetirSenha.campos.senha5, repetirSenhaSplitted[5]);
   },
 
   compartilharDadosEContinuar() {
-    I.waitForElement(
-      pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes,
-      10
-    );
-    I.tap(
-      pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes,
-      0,
-      0
-    );
+    I.waitForElement(pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes,10);
+    I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes, 0, 0);
     I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosBancoMidway, 0, 0);
-
-    I.swipeDown(pageConfiabilidade.botoes.btnContinuar);
-
     I.tap(pageConfiabilidade.botoes.btnContinuar, 0, 0);
   },
 };

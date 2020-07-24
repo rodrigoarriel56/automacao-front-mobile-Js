@@ -38,70 +38,21 @@ Given(
   /informo corretamente o codigo de acesso \(token\) recebido por sms/,
   () => {
     onboardingActions.preencherToken("222222");
-    // onboarding.clicarSolicitacaoConfiabilidade();
   }
 );
 
 When("cadastro uma nova senha corretamente", () => {
-  senhaValida = "222222";
-  resultado = senhaValida.split("");
   //Senha
-
-  // })
-  // onboardingActions.preencherSenha({
-  //   senhaValida: "1"
-  // });
-
-  // onboardingActions.preencherSenha({
-  //   senhaValida1: "1"
-  // });
-
-  // onboardingActions.preencherSenha({
-  //   senhaValida2: "6"
-  // });
-
-  // onboardingActions.preencherSenha({
-  //   senhaValida3: "0"
-  // });
-
-  // onboardingActions.preencherSenha({
-  //   senhaValida4: "0"
-  // });
-
-  // onboardingActions.preencherSenha({
-  //   senhaValida5: "6"
-  // });
+  onboardingActions.preencherSenha("196006");
 
   // //Repetir Senha
-  // onboardingActions.preencherSenhaNovamente({
-  //   senhaValida: "1"
-  // })
-
-  // onboardingActions.preencherSenhaNovamente({
-  //   senhaValida1: "9"
-  // })
-
-  // onboardingActions.preencherSenhaNovamente({
-  //   senhaValida2: "6"
-  // })
-
-  // onboardingActions.preencherSenhaNovamente({
-  //   senhaValida3: "0"
-  // })
-
-  // onboardingActions.preencherSenhaNovamente({
-  //   senhaValida4: "0"
-  // })
-
-  // onboardingActions.preencherSenhaNovamente({
-  //   senhaValida5: "6"
-  // })
+  onboardingActions.preencherSenhaNovamente("196006");
 
   // //Confiabilidade
-  // onboardingActions.compartilharDadosEContinuar();
+  onboardingActions.compartilharDadosEContinuar();
 });
 
-Then("conta pagamento criada com sucesso", () => {
+Then("a conta pagamento deve ser criada com sucesso", () => {
   onboarding.clicarBotaoAceitarContaSimples();
   onboarding.clicarBotaoContinuarCestaBeneficios();
 });
