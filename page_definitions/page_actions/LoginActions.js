@@ -15,7 +15,7 @@ module.exports = {
 
   preencheCamposLogin(dados) {
     I.fillField(pageLogin.campos.campoCpf, dados.cpf);
-    I.waitForElement(pageLogin.botoes.btnContinuar, 30);
+    I.waitForElement(pageLogin.botoes.btnContinuar, 50);
     I.tap(pageLogin.botoes.btnContinuar);
     I.waitForElement(pageLogin.campos.campoSenha, 20);
     I.fillField(pageLogin.campos.campoSenha, dados.senha);
