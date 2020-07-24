@@ -1,5 +1,6 @@
 const { I } = inject();
 const onboardingActions = require("../../page_definitions/page_actions/OnboardingActions.js");
+const pageAceitarContaSimples = require("../../page_definitions/page_objects/onboarding/PageAceitarContaSimples.js");
 
 Given("que aciono a opção parar abrir minha conta midway", () => {
   onboardingActions.abrirMinhaContaMidwayApp();
@@ -53,6 +54,6 @@ When("cadastro uma nova senha corretamente", () => {
 });
 
 Then("a conta pagamento deve ser criada com sucesso", () => {
-  onboarding.clicarBotaoAceitarContaSimples();
-  onboarding.clicarBotaoContinuarCestaBeneficios();
+  onboardingActions.clicarBotaoAceitarContaSimples();
+  I.see(pageAceitarContaSimples.textos.txtContaSimples);
 });

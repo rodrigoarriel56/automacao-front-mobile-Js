@@ -10,6 +10,7 @@ const pageToken = require("../page_objects/onboarding/PageToken.js");
 const pageSenha = require("../page_objects/onboarding/PageSenha.js");
 const pageRepetirSenha = require("../page_objects/onboarding/PageRepetirSenha.js");
 const pageConfiabilidade = require("../page_objects/onboarding/PageConfiabilidade.js");
+const PageAceitarContaSimples = require("../page_objects/onboarding/PageAceitarContaSimples.js");
 const permissionModalActions = require("../page_actions/PermissionModalActions.js");
 
 module.exports = {
@@ -121,4 +122,10 @@ module.exports = {
     I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosBancoMidway, 0, 0);
     I.tap(pageConfiabilidade.botoes.btnContinuar, 0, 0);
   },
+
+  clicarBotaoAceitarContaSimples() {
+    I.waitForElement(PageAceitarContaSimples.botoes.btnAceitaContaSimples, 10);
+    I.tap(PageAceitarContaSimples.botoes.btnAceitaContaSimples, 0, 0);
+  }
+
 };
