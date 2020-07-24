@@ -7,7 +7,7 @@ Funcionalidade: Criação de conta pagamento
     E aceito os termos de uso acionando a opção para entrar
     E preencho todos os campos solicitados corretamente acionando a opção continuar quando necessário
     E após aceitar a permissão de Biometria Facial tiro corretamente uma foto
-    E informo corretamento o codigo de acesso (token) recebido por sms
+    E informo corretamente o codigo de acesso (token) recebido por sms
     Quando cadastro uma nova senha corretamente
         
     # E preencho o campo cpf

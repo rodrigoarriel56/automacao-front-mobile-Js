@@ -5,6 +5,7 @@ const pageBemVindoCPF = require("../page_objects/onboarding/PageBemVindoCPF.js")
 const pageBemVindoNomeCompleto = require("../page_objects/onboarding/PageBemVindoNomeCompleto.js");
 const pageDadosPessoais = require("../page_objects/onboarding/PageDadosPessoais.js");
 const pageBiometriaFacial = require("../page_objects/onboarding/PageBiometriaFacial.js");
+const cameraFragment = require("../page_fragments/Camera.js");
 const pageToken = require("../page_objects/onboarding/PageToken.js");
 const pageSenha = require("../page_objects/onboarding/PageSenha.js");
 const pageRepetirSenha = require("../page_objects/onboarding/PageRepetirSenha.js");
@@ -30,7 +31,7 @@ module.exports = {
   },
 
   preencherNomeEContinuar(value) {
-    I.waitForElement(pageBemVindoNomeCompleto.labels.labelNomeCompleto, 20);
+    I.waitForElement(pageBemVindoNomeCompleto.labels.labelNomeCompleto, 60);
     I.tap(pageBemVindoNomeCompleto.labels.labelNomeCompleto, 0, 0);
     I.fillField(pageBemVindoNomeCompleto.campos.campoNomeCompleto, value);
     I.tap(pageBemVindoNomeCompleto.botoes.btnContinuar, 0, 0);
@@ -58,7 +59,7 @@ module.exports = {
 
     I.swipeDown(pageDadosPessoais.botoes.btnContinuarContainer);
 
-    I.tap(pageDadosPessoais.campos.aceitoCompartilharDados);
+    I.tap(pageDadosPessoais.campos.checkAceitoCompartilharDados);
 
     I.tap(pageDadosPessoais.botoes.btnContinuar, 0, 0);
   },
@@ -70,113 +71,83 @@ module.exports = {
     await I.swipeHorizontal(80, 20);
     await I.swipeHorizontal(80, 20);
     permissionModalActions.permitir();
-    // I.tap(pageBiometriaFacial.botoes.btnContinuar, 0, 0);
-    // I.sendDeviceKeyEvent(27);
-    
+
     I.tap(pageBiometriaFacial.botoes.btnContinuar, 0, 0);
-    I.tap(pageBiometriaFacial.botoes.btnFotoBiometria, 0, 0);
-    I.sendDeviceKeyEvent(27);
+    I.tap(cameraFragment.botoes.btnTirarFoto, 0, 0);
     I.waitForElement(pageBiometriaFacial.botoes.btnContinuar, 20);
     I.tap(pageBiometriaFacial.botoes.btnContinuar, 0, 0);
   },
 
-    //Método Token
-    preencherToken(dados) {
+  //Método Token
+  preencherToken(token) {
+    const tokenSplitted = token.split("");
     I.waitForElement(pageToken.campos.token, 10);
     I.tap(pageToken.campos.token, 0, 0);
-    //I.fillField(pageToken.campos.token, value)
+    I.fillField(pageToken.campos.token, tokenSplitted[0]);
+    I.fillField(pageToken.campos.token1, tokenSplitted[1]);
+    I.fillField(pageToken.campos.token2, tokenSplitted[2]);
+    I.fillField(pageToken.campos.token3, tokenSplitted[3]);
+    I.fillField(pageToken.campos.token4, tokenSplitted[4]);
+    I.fillField(pageToken.campos.token5, tokenSplitted[5]);
+  },
 
-    I.fillField(
-      pageToken.campos.token,
-      dados.tokenValido);
+  preencherSenha(dados) {
+    // I.waitForElement(pageSenha.campos.senha, 10);
+    I.tap(pageSenha.campos.senha, 0, 0);
 
-      I.fillField(
-        pageToken.campos.token1,
-        dados.tokenValido);
+    I.fillField(pageSenha.campos.senha, dados.senhaValida[1]);
 
-      I.fillField(
-        pageToken.campos.token2,
-        dados.tokenValido);
+    // I.fillField(
+    //   pageSenha.campos.senha1,
+    //   dados.senhaValida[2]);
 
-      I.fillField(
-        pageToken.campos.token3,
-        dados.tokenValido);
+    // I.fillField(
+    //   pageSenha.campos.senha2,
+    //   dados.senhaValida2);
 
-      I.fillField(
-        pageToken.campos.token4,
-        dados.tokenValido);
+    // I.fillField(
+    //   pageSenha.campos.senha3,
+    //   dados.senhaValida3);
 
-      I.fillField(
-        pageToken.campos.token5,
-        dados.tokenValido);
-    },
+    // I.fillField(
+    //   pageSenha.campos.senha4,
+    //   dados.senhaValida4);
 
-    preencherSenha(dados) {
-     // I.waitForElement(pageSenha.campos.senha, 10);
-      I.tap(pageSenha.campos.senha, 0, 0);
+    // I.fillField(
+    //   pageSenha.campos.senha5,
+    //   dados.senhaValida5);
+  },
 
-      I.fillField(
-        pageSenha.campos.senha,
-        dados.senhaValida[1]);
+  preencherSenhaNovamente(dados) {
+    I.tap(pageRepetirSenha.campos.senha, 0, 0);
 
-      // I.fillField(
-      //   pageSenha.campos.senha1,
-      //   dados.senhaValida[2]);
+    I.fillField(pageRepetirSenha.campos.senha, dados.senhaValida);
 
-      // I.fillField(
-      //   pageSenha.campos.senha2,
-      //   dados.senhaValida2);
+    I.fillField(pageRepetirSenha.campos.senha1, dados.senhaValida1);
 
-      // I.fillField(
-      //   pageSenha.campos.senha3,
-      //   dados.senhaValida3);
+    I.fillField(pageRepetirSenha.campos.senha2, dados.senhaValida2);
 
-      // I.fillField(
-      //   pageSenha.campos.senha4,
-      //   dados.senhaValida4);
+    I.fillField(pageRepetirSenha.campos.senha3, dados.senhaValida3);
 
-      // I.fillField(
-      //   pageSenha.campos.senha5,
-      //   dados.senhaValida5);   
-    },
+    I.fillField(pageRepetirSenha.campos.senha4, dados.senhaValida4);
 
-    preencherSenhaNovamente(dados){
-      I.tap(pageRepetirSenha.campos.senha, 0, 0);
+    I.fillField(pageRepetirSenha.campos.senha5, dados.senhaValida5);
+  },
 
-      I.fillField(
-        pageRepetirSenha.campos.senha,
-        dados.senhaValida);
+  compartilharDadosEContinuar() {
+    I.waitForElement(
+      pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes,
+      10
+    );
+    I.tap(
+      pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes,
+      0,
+      0
+    );
+    I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosBancoMidway, 0, 0);
 
-      I.fillField(
-        pageRepetirSenha.campos.senha1,
-        dados.senhaValida1);
+    I.swipeDown(pageConfiabilidade.botoes.btnContinuar);
 
-      I.fillField(
-        pageRepetirSenha.campos.senha2,
-        dados.senhaValida2);
-
-      I.fillField(
-        pageRepetirSenha.campos.senha3,
-        dados.senhaValida3);
-
-      I.fillField(
-        pageRepetirSenha.campos.senha4,
-        dados.senhaValida4);
-
-      I.fillField(
-        pageRepetirSenha.campos.senha5,
-        dados.senhaValida5);   
-    },
-
-    compartilharDadosEContinuar(){
-      I.waitForElement(pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes, 10);
-      I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosGrupoGuararapes, 0, 0)
-      I.tap(pageConfiabilidade.campos.aceitoCompartilharDadosBancoMidway, 0, 0);
-  
-      I.swipeDown(pageConfiabilidade.botoes.btnContinuar);
-  
-      I.tap(pageConfiabilidade.botoes.btnContinuar, 0, 0);
-    }
-
-    
+    I.tap(pageConfiabilidade.botoes.btnContinuar, 0, 0);
+  },
 };

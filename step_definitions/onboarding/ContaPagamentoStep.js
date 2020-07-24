@@ -1,3 +1,4 @@
+const { I } = inject();
 const onboardingActions = require("../../page_definitions/page_actions/OnboardingActions.js");
 
 Given("que aciono a opção parar abrir minha conta midway", () => {
@@ -11,8 +12,8 @@ Given("aceito os termos de uso acionando a opção para entrar", () => {
 Given(
   "preencho todos os campos solicitados corretamente acionando a opção continuar quando necessário",
   async () => {
-    const cpf = "27915823043";
     // TODO: usar fakerjs
+    const cpf = await I.generateACPF();
     onboardingActions.preencherCPFEContinuar(cpf);
     // TODO: usar fakerjs
     onboardingActions.preencherNomeEContinuar("Rodrigo Florindo de Deus");
@@ -23,8 +24,6 @@ Given(
       email: "rodrigo.florindo@gmail.com",
       dataNascimento: "11121988",
     });
-    // TODO: ver realmente se esse compartilhar dados n existe mais
-    //onboardingActions.clicarAceitoCompartilharMeusDados();
   }
 );
 
@@ -35,17 +34,17 @@ Given(
   }
 );
 
-Given(/informo corretamento o codigo de acesso \(token\) recebido por sms/, () => {
-onboardingActions.preencherToken({
-    tokenValido: "2"
-  });
-
-  // onboarding.clicarSolicitacaoConfiabilidade();
-});
+Given(
+  /informo corretamente o codigo de acesso \(token\) recebido por sms/,
+  () => {
+    onboardingActions.preencherToken("222222");
+    // onboarding.clicarSolicitacaoConfiabilidade();
+  }
+);
 
 When("cadastro uma nova senha corretamente", () => {
- senhaValida = "222222";
- resultado = senhaValida.split("");
+  senhaValida = "222222";
+  resultado = senhaValida.split("");
   //Senha
 
   // })
