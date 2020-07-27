@@ -4,14 +4,14 @@ exports.config = {
   output: "./allure-report/report",
   helpers: {
     Appium: {
-      app: `${process.env.PWD}/app/Android/app-mtest-release.apk`,
+      app: `${process.env.PWD}/app/Android/app-qa-release.apk`,
       platform: "Android",
       host: "localhost",
       port: 4723,
       desiredCapabilities: {
         automationName: "uiautomator2",
-        deviceName: "d2e3f53a",
-        platformVersion: "10",
+        deviceName: "Pixel 2",
+        platformVersion: "9",
       },
     },
     SwipeHelper: {

@@ -1,13 +1,13 @@
 {
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "1984",
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Operator Mono Lig Book'",
     "terminal.integrated.fontFamily": "monospace",
     "window.zoomLevel": -1,
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "git.ignoreLimitWarning": true,
     "cucumberautocomplete.steps": [
         "features/step_definitions/*.rb",
@@ -48,7 +48,7 @@
         "*.feature": "feature",
         ".env.automation": "dotenv"
     },
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     "files.autoSave": "afterDelay",
     "javascript.updateImportsOnFileMove.enabled": "always",
 }

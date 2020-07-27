@@ -15,15 +15,15 @@ module.exports = {
 
   preencheCamposLogin(dados) {
     I.fillField(pageLogin.campos.campoCpf, dados.cpf);
-    I.waitForElement(pageLogin.botoes.btnContinuar, 30);
-    I.tap(pageLogin.botoes.btnContinuar);
+    I.waitForElement(pageLogin.botoes.btnContinuar, 50);
+    I.tap(pageLogin.botoes.btnContinuar, 0,0);
     I.waitForElement(pageLogin.campos.campoSenha, 20);
     I.fillField(pageLogin.campos.campoSenha, dados.senha);
   },
 
   selecionaOpcaoLogar() {
-    I.waitForElement(pageLogin.botoes.btnEntrar);
-    I.tap(pageLogin.botoes.btnEntrar);
-    I.waitForElement(pageHome.textos.txtBemVindo, 30);
+    I.waitForElement(pageLogin.botoes.btnEntrar, 20);
+    I.tap(pageLogin.botoes.btnEntrar, 0,0);
+    I.waitForElement(pageHome.textos.txtBemVindo, 40);
   },
 };
