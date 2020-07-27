@@ -17,6 +17,6 @@ module.exports = {
     selecionaOpcaoGerarBoleto() {
         I.waitForVisible(pageBoleto.botoes.btnGerarBoleto, 5);
         I.tap(pageBoleto.botoes.btnGerarBoleto, 0,0) ;
-        I.waitForVisible(pageBoleto.textos.txtBoletoGerado, 20);
+        I.waitForVisible(pageBoleto.textos.txtCodigoBoleto, 20);
     }
 }

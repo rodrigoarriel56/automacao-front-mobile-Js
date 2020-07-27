@@ -24,6 +24,6 @@ When(/el(?:e|a) informa o valor para o deposito/, () => {
 });
 
 Then(/el(?:e|a) deve ver que o boleto foi gerado com sucesso/, () => {
-   I.see(pageBoleto.textos.txtCodigoBoleto, 10);
-   I.see(pageBoleto.textos.txtComprovante, 5)
+   I.see(pageBoleto.textos.txtCodigoBoleto);
+   I.see(pageBoleto.textos.txtComprovante)
 });  
