@@ -15,7 +15,7 @@
     "node": "^14.4.0",
     "python3": "0.0.1",
     "selenium": "^2.20.0",
-    "webdriverio": "^6.1.22"
+    "webdriverio": "^8.3.5"
   },
   "bundledDependencies": [
     "appium-doctor",
